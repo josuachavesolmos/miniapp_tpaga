@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cost:</strong>
+  <%= @order.cost %>
+</p>
+
+<p>
+  <strong>Purchase details url:</strong>
+  <%= @order.purchase_details_url %>
+</p>
+
+<p>
+  <strong>Voucher url:</strong>
+  <%= @order.voucher_url %>
+</p>
+
+<p>
+  <strong>Idempotency token:</strong>
+  <%= @order.idempotency_token %>
+</p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @order.order_id %>
+</p>
+
+<p>
+  <strong>Terminal:</strong>
+  <%= @order.terminal_id %>
+</p>
+
+<p>
+  <strong>Purchase description:</strong>
+  <%= @order.purchase_description %>
+</p>
+
+<p>
+  <strong>Purchase items:</strong>
+  <%= @order.purchase_items %>
+</p>
+
+<p>
+  <strong>User ip address:</strong>
+  <%= @order.user_ip_address %>
+</p>
+
+<p>
+  <strong>Expires at:</strong>
+  <%= @order.expires_at %>
+</p>
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

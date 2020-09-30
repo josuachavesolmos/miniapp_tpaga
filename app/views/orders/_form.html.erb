@@ -1,0 +1,67 @@
+<%= form_with(model: order, local: true) do |form| %>
+  <% if order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+      <% order.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :cost %>
+    <%= form.text_field :cost %>
+  </div>
+
+  <div class="field">
+    <%= form.label :purchase_details_url %>
+    <%= form.text_field :purchase_details_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :voucher_url %>
+    <%= form.text_field :voucher_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :idempotency_token %>
+    <%= form.text_field :idempotency_token %>
+  </div>
+
+  <div class="field">
+    <%= form.label :order_id %>
+    <%= form.number_field :order_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :terminal_id %>
+    <%= form.text_field :terminal_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :purchase_description %>
+    <%= form.text_field :purchase_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :purchase_items %>
+    <%= form.text_field :purchase_items %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_ip_address %>
+    <%= form.text_field :user_ip_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :expires_at %>
+    <%= form.datetime_select :expires_at %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
